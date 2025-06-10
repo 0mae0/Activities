@@ -131,7 +131,7 @@ presence.on('UpdateData', async () => {
 
     presenceData = {
       type: ActivityType.Listening,
-      name: artistAsTitle ? mediaSession.metadata.artist : showAsListening ? mediaSession.metadata.title : 'YouTube Music',
+      name: mediaSession.metadata.title,
       largeImageKey: showCover
         ? mediaSession?.metadata?.artwork?.at(-1)?.src
         ?? ActivityAssets.Logo
